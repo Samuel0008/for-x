@@ -125,7 +125,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
-    height: 19vh;
+    height: 90px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
