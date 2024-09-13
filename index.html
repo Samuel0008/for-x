@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Chat</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <!-- User Login Section -->
+    <div id="login-container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p id="login-error" style="color:red;"></p>
+    </div>
+
+    <!-- Chat Interface Section -->
+    <div id="app-container" style="display:none;">
+        <div id="top-bar">
+            <!-- Top Left (Numeric Input and Go Button) -->
+            <div id="top-left">
+                <input type="number" id="jump-input" placeholder="Enter number">
+                <button onclick="goToConversation()">Go</button>
+            </div>
+            <!-- Top Right (Current Number Display and Admin Button) -->
+            <div id="top-right">
+                <span id="current-conversation-number"></span>
+                <button id="admin-login-btn" onclick="showAdminLogin()">Login As Admin</button>
+            </div>
+        </div>
+        <!-- Chat Content -->
+        <div id="chat-container">
+            <div id="chat-messages1">
+                <p class="initMsg">Select an Option to Begin the Chat!</p>
+            </div>
+            <div id="chat-messages"></div>
+            <div id="question"></div>
+            <button onclick="toggleOptions()" id="tggle-opt-btn">Toggle Options</button>
+            <div id="options"></div>
+            <button onclick="goBack()" id="back-btn">Back</button>
+        </div>
+    </div>
+
+    <!-- Admin Login Section -->
+    <div id="admin-login-container" style="display:none;">
+        <h2>Admin Login</h2>
+        <input type="text" id="admin-username" placeholder="Admin Username">
+        <input type="password" id="admin-password" placeholder="Admin Password">
+        <button onclick="loginAsAdmin()">Login As Admin</button>
+        <p id="admin-login-error" style="color:red;"></p>
+    </div>
+
+    <!-- Admin Panel Section -->
+    <div id="admin-panel" style="display:none;">
+        <h2>Admin Panel</h2>
+        <!-- Input Fields for Code Generation -->
+        <div id="code-generator-section">
+            <input type="text" id="input1" placeholder="Key (initial)">
+            <input type="text" id="input2" placeholder="Question">
+            <input type="text" id="input3" placeholder="Option 1">
+            <input type="text" id="input4" placeholder="Value 1">
+            <input type="text" id="input5" placeholder="Option 2">
+            <input type="text" id="input6" placeholder="Value 2">
+            <input type="text" id="input7" placeholder="Option 3">
+            <input type="text" id="input8" placeholder="Value 3">
+            <input type="text" id="input9" placeholder="Option 4">
+            <input type="text" id="input10" placeholder="Value 4">
+            <input type="text" id="input11" placeholder="Option 5">
+            <input type="text" id="input12" placeholder="Value 5">
+            <input type="text" id="input13" placeholder="Option 6">
+            <input type="text" id="input14" placeholder="Value 6">
+            <input type="text" id="input15" placeholder="Option 7">
+            <input type="text" id="input16" placeholder="Value 7">
+            <!-- Add more fields if needed -->
+            <button onclick="generateCode()">Add Code</button>
+            <div id="code-output"></div>
+            <button onclick="copyCode()">Copy Code</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
